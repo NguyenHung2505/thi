@@ -1,0 +1,21 @@
+<h1>Tạo Student</h1>
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+  <table>
+    <tr>
+      <td>Name:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td>Action</td>
+      <td><input type="text" formControlName="action"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button>Tạo mới</button></td>
+    </tr>
+  </table>
+</form>

@@ -1,0 +1,22 @@
+<p>Danh Sach Hoc Sinh</p>
+<table border="1px">
+  <tr>
+    <td>Stt</td>
+    <td>Name</td>
+    <td>Description</td>
+    <td>Action</td>
+    <td colspan="2">Action</td>
+  </tr>
+  <tr *ngFor = "let student of students; index as i" >
+    <td>{{i + 1}}</td>
+    <td>{{student.name}}</td>
+    <td>{{student.description}}</td>
+    <td>{{student.action}}</td>
+    <td><a [routerLink]="['/edit', student.id]">Edit</a></td>
+    <button (click)="delete(student.id)" class="btn btn-success">xoá</button>
+  </tr>
+</table>
+<h3><a routerLink="create">Create</a></h3>
+<router-outlet></router-outlet>
+
+
